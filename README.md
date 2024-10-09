@@ -12,3 +12,6 @@ https://www.virtualbox.org/wiki/Downloads
 I encourage you to use a Windows machine to do this since my knowledge about MacOS systems is very limited.
 In case that you only have a MacOS computer, bring it to the club sessions and we will find a way to install VirtualBox and have it running for you to be able to code within the virtual machine.
 
+The files in this GitHUB repository are to be used within a virtual machine.
+
+I don't recomend installing kivy on your main system. Do it instead within a virtual machine.
