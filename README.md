@@ -15,3 +15,5 @@ In case that you only have a MacOS computer, bring it to the club sessions and w
 The files in this GitHUB repository are to be used within a virtual machine.
 
 I don't recomend installing kivy on your main system. Do it instead within a virtual machine.
+
+Later in the week I will upload videos to youtube so you can learn how to install VirtualBox as not to have to modify your main system.
