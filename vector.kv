@@ -1,0 +1,104 @@
+<MainLayout>:
+	id:main_layout
+	size_hint: 1, 1
+	pos_hint: {"x": 0, "top": 1}
+	
+	RelativeLayout:
+		id: main_menu
+		size_hint: 5/100, 1
+		pos_hint: {"x": 0, "top": 1}
+		MainMenuButton:
+			id:free_hand_drawing_button
+			text: "Free Hand"
+			pos_hint: {"x": 0, "top": 1}
+			on_press:
+				root.object_manager.drafting_tool.active_tool = root.object_manager.drafting_tool.free_hand_drawing
+				print("Active tool is now", root.object_manager.drafting_tool.active_tool.name)
+		MainMenuButton:
+			id:line_button
+			text: "Line"
+			pos_hint: {"x": 0, "top": 0.90}
+			on_press:
+				root.object_manager.drafting_tool.active_tool = root.object_manager.drafting_tool.line
+				print("Active tool is now", root.object_manager.drafting_tool.active_tool.name)
+		MainMenuButton:
+			id:rectangle_button
+			text: "Rectangle"
+			pos_hint: {"x": 0, "top": 0.80}
+			on_press:
+				root.object_manager.drafting_tool.active_tool = root.object_manager.drafting_tool.rectangle
+				print("Active tool is now", root.object_manager.drafting_tool.active_tool.name)
+		MainMenuButton:
+			id:polyline_button
+			text: "Polyline"
+			pos_hint: {"x": 0, "top": 0.70}
+			on_press:
+				root.object_manager.drafting_tool.active_tool = root.object_manager.drafting_tool.polyline
+				print("Active tool is now", root.object_manager.drafting_tool.active_tool.name)
+				root.object_manager.drafting_tool.polyline.is_first_point = True
+		MainMenuButton:
+			id:ellipse_button
+			text: "Ellipse"
+			pos_hint: {"x": 0, "top": 0.60}
+			on_press:
+				pass
+		MainMenuButton:
+			id:delete_button
+			text: "Delete"
+			pos_hint: {"x": 0, "top": 0.50}
+			on_press:
+				root.object_manager.drafting_tool.active_tool = root.object_manager.drafting_tool.delete
+				print("Active tool is now", root.object_manager.drafting_tool.active_tool.name)
+		MainMenuButton:
+			id:color_button
+			text: "Color"
+			pos_hint: {"x": 0, "top": 0.40}
+			on_press: pass
+		MainMenuButton:
+			id:size_button
+			text: "Size"
+			pos_hint: {"x": 0, "top": 0.30}
+			on_press: pass
+		MainMenuButton:
+			id:zoom_out_button
+			text: "Zoom"
+			pos_hint: {"x": 0, "top": 0.20}
+			on_press: pass
+		MainMenuButton:
+			id:move_button
+			text: "Move"
+			pos_hint: {"x": 0, "top": 0.10}
+			on_press: pass
+		
+		
+	RelativeLayout:
+		id: drawing_area
+		size_hint: 95/100, 1
+		pos_hint: {"x": 5/100, "top": 1}
+		canvas:
+			Color:
+				rgba: 1, 1, 1, 1
+			Rectangle:
+				size: self.size
+				pos: [0, 0]
+			Color:
+				rgba: 0, 0, 0, 1
+				
+			
+		
+	RelativeLayout:
+		id: eraser_layout
+		size_hint: 0.05 * root.height / root.width, 0.05
+		pos_hint: {"center_x": -1, "center_y": -1}
+		canvas:
+			Color:
+				rgba: 1, 1, 0, 0.5
+			Ellipse:
+				size: self.size
+				pos: [0, 0]
+		
+<MainMenuButton@Button>
+	font_size: "15dp"
+	size_hint: 1, 0.10
+	background_color: 0, 0, 1, 1
+
