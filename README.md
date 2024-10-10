@@ -16,4 +16,12 @@ The files in this GitHUB repository are to be used within a virtual machine.
 
 I don't recomend installing kivy on your main system. Do it instead within a virtual machine.
 
-Later in the week I will upload videos to youtube so you can learn how to install VirtualBox as not to have to modify your main system.
+You can watch the following videos to understand how to install VirtualBox, how to create a virtual machine, how to install Debian GNU/Linux within the newly created virtual machine and how to set up the development environment
+
+https://youtu.be/Ecy44R5KcTE
+
+https://youtu.be/iR126Ku5JbA
+
+https://youtu.be/2EpjhKbHLrQ
+
+https://youtu.be/2atLUDuU2Es
